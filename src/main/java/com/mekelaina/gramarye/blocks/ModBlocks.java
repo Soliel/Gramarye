@@ -10,12 +10,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBlocks {
-
-    public ModBlocks() {
-
-    }
-    //Blocks
-
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Gramarye.MODID);
 
     public static final RegistryObject<Block> CRYSTALBLOCK = BLOCKS.register("crystalblock", () ->
@@ -61,6 +55,5 @@ public class ModBlocks {
     public static final RegistryObject<Block> BATTERY = BLOCKS.register("battery", ()->
             new Battery(Block.Properties.create(Material.IRON).hardnessAndResistance(3f).harvestLevel(1)
             .harvestTool(ToolType.PICKAXE).sound(SoundType.METAL)));
-
 
 }

@@ -3,6 +3,7 @@ package com.mekelaina.gramarye.blocks.tiles;
 import com.mekelaina.gramarye.Gramarye;
 import com.mekelaina.gramarye.blocks.Charger;
 import com.mekelaina.gramarye.blocks.ModBlocks;
+import com.mekelaina.gramarye.blocks.spellblocks.tiles.FurnusTile;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

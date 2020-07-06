@@ -2,6 +2,8 @@ package com.mekelaina.gramarye.setup;
 
 
 import com.mekelaina.gramarye.Gramarye;
+import com.mekelaina.gramarye.blocks.spellblocks.SpellBlocks;
+import com.mekelaina.gramarye.blocks.spellblocks.tiles.SpellTileEntities;
 import com.mekelaina.gramarye.capabilities.CapabilityExperia;
 import com.mekelaina.gramarye.spell.SpellSetup;
 import com.mekelaina.gramarye.blocks.ModBlocks;
@@ -24,11 +26,14 @@ public class Registration {
 
     public static void init(IEventBus bus){
         SpellSetup.registerSpellBooks();
+        SpellBlocks.SPELL_BLOCKS.register(bus);
+        SpellTileEntities.SPELL_TILE_ENTITIES.register(bus);
         ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
         ModEntities.ENTITY_TYPES.register(bus);
         ModTileEntities.TILE_ENTITIES.register(bus);
         ModContainers.CONTAINERS.register(bus);
+
     }
 
     @SubscribeEvent
