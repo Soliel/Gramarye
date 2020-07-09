@@ -1,7 +1,10 @@
-package com.mekelaina.gramarye.spell;
+package com.mekelaina.gramarye.setup;
 
 import com.mekelaina.gramarye.items.book.GenericSpellBook;
 import com.mekelaina.gramarye.items.ModItems;
+import com.mekelaina.gramarye.spell.Spell;
+import com.mekelaina.gramarye.spell.SpellFurnus;
+import com.mekelaina.gramarye.spell.SpellSpark;
 
 import java.util.HashMap;
 
@@ -11,8 +14,9 @@ public class SpellSetup {
     public static final HashMap<String, Spell> spellMap = new HashMap<>();
 
     private static void registerSpell(Spell spell) {
-        if(spell.registryName != null) {
-            registerSpell(spell, spell.registryName);
+        String spellName = spell.getSpellRegistryName();
+        if(spellName != null) {
+            registerSpell(spell, spellName);
         }
     }
 
@@ -35,5 +39,6 @@ public class SpellSetup {
     //Any new spell should be placed below.
     private static void registerAllSpells() {
         registerSpell(new SpellSpark());
+        registerSpell(new SpellFurnus());
     }
 }

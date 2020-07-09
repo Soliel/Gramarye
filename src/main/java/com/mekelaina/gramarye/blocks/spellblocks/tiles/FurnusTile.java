@@ -16,7 +16,7 @@ import java.util.List;
 
 public class FurnusTile  extends TileEntity implements ITickableTileEntity {
     private final GroundInventory furnusInventory = new GroundInventory();
-    private final NonNullList<ItemEntity> itemList = NonNullList.create();
+    private final NonNullList<ItemEntity> createdEntityList = NonNullList.create();
 
     public FurnusTile() {
         super(SpellTileEntities.FURNUS_TILE.get());
@@ -26,7 +26,7 @@ public class FurnusTile  extends TileEntity implements ITickableTileEntity {
     public void tick() {
         List<ItemEntity> itemList = this.findItemEntitiesAroundBlockPos(this.pos, this.world);
         for (ItemEntity item : itemList) {
-            if(itemList.contains(item)) continue;
+            if(createdEntityList.contains(item)) continue;
 
             furnusInventory.setInventorySlotContents(0, item.getItem());
             IRecipe<?> iRecipe = this.world.getRecipeManager().getRecipe(IRecipeType.SMELTING, furnusInventory, this.world).orElse(null);
@@ -52,7 +52,7 @@ public class FurnusTile  extends TileEntity implements ITickableTileEntity {
 
         furnusInventory.clear();
         item.remove();
-        itemList.add(newEntity);
+        createdEntityList.add(newEntity);
     }
 
 }

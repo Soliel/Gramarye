@@ -2,7 +2,7 @@ package com.mekelaina.gramarye.datagen;
 
 import com.mekelaina.gramarye.Gramarye;
 import com.mekelaina.gramarye.spell.Spell;
-import com.mekelaina.gramarye.spell.SpellSetup;
+import com.mekelaina.gramarye.setup.SpellSetup;
 import com.mekelaina.gramarye.blocks.ModBlocks;
 import com.mekelaina.gramarye.items.ModItems;
 import net.minecraft.data.DataGenerator;

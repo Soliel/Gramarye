@@ -5,7 +5,6 @@ import com.mekelaina.gramarye.Gramarye;
 import com.mekelaina.gramarye.blocks.spellblocks.SpellBlocks;
 import com.mekelaina.gramarye.blocks.spellblocks.tiles.SpellTileEntities;
 import com.mekelaina.gramarye.capabilities.CapabilityExperia;
-import com.mekelaina.gramarye.spell.SpellSetup;
 import com.mekelaina.gramarye.blocks.ModBlocks;
 import com.mekelaina.gramarye.blocks.containers.ModContainers;
 import com.mekelaina.gramarye.blocks.tiles.ModTileEntities;

@@ -1,5 +1,10 @@
 package com.mekelaina.gramarye.spell;
 
+import com.mekelaina.gramarye.blocks.spellblocks.SpellBlocks;
+import com.mekelaina.gramarye.util.SpellUtil;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.util.ActionResultType;
+
 public class SpellFurnus extends Spell {
     public SpellFurnus() {
         super(new Properties()
@@ -13,6 +18,8 @@ public class SpellFurnus extends Spell {
 
     @Override
     public SpellCastResult onSpellCast(SpellCastContext spellContext) {
-        return null;
+        BlockItemUseContext blockContext = new BlockItemUseContext(spellContext.parentContext);
+        SpellUtil.placeBlock(blockContext, SpellBlocks.FURNUS.get());
+        return new SpellCastResult(ActionResultType.SUCCESS);
     }
 }
