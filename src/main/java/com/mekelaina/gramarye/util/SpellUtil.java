@@ -10,6 +10,7 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 public class SpellUtil {
     public static boolean placeBlock(BlockItemUseContext context, Block newBlock) {
         final BlockState newState = getBlockStateForNewBlock(context, newBlock);
+        if(newState == null) return false;
         final boolean didPlaceSucceed = placeBlock(context, newState);
         if(didPlaceSucceed) {
             BlockItem.setTileEntityNBT(context.getWorld(), context.getPlayer(), context.getPos(), context.getItem());
