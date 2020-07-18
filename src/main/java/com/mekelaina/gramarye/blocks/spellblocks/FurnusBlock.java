@@ -18,6 +18,8 @@ public class FurnusBlock extends Block {
         super(Properties
                 .create(Material.AIR)
                 .notSolid()
+                .doesNotBlockMovement()
+                .lightValue(5)
                 .noDrops()
         );
     }
@@ -40,6 +42,6 @@ public class FurnusBlock extends Block {
 
     @Override
     public BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.INVISIBLE;
+        return BlockRenderType.ENTITYBLOCK_ANIMATED;
     }
 }
